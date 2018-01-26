@@ -14,7 +14,7 @@ describe "FormsLab::App" do
     end
   end
 
-  describe "GET '/new'" do
+  describe "GET '/pirates/new'" do
     before(:each) do
       get '/new'
     end
@@ -57,12 +57,12 @@ describe "FormsLab::App" do
           "ships"=> [
             {
               "name"=>"Titanic",
-              "type"=>"Steam Liner",
+              "category"=>"Steam Liner",
               "booty"=>"Silver"
             },
             {
               "name"=> "Carpathia",
-              "type"=>"Rescue Ship",
+              "category"=>"Rescue Ship",
               "booty"=>"Inner Tubes"
             }
           ]
