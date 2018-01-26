@@ -13,7 +13,7 @@ module FormsLab
       erb :'pirates/index'
     end
 
-    get '/pirates/new' do
+    get 'pirates/new' do
       erb :'pirates/new'
     end
 
@@ -22,7 +22,6 @@ module FormsLab
 
       erb :'pirates/show'
     end
-
 
     post '/pirates' do
       pirate = Pirate.create(name: params[:pirate][:name], height: params[:pirate][:height], weight: params[:pirate][:weight])

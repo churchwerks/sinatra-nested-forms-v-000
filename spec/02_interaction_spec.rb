@@ -1,6 +1,6 @@
 context "Filling in the Form" do
   before do
-    visit "/new"
+    visit "pirates/new"
   end
 
   it "can fill in forms for a pirate and two ships" do
@@ -8,10 +8,10 @@ context "Filling in the Form" do
     fill_in("pirate[weight]", :with => "190 lbs")
     fill_in("pirate[height]", :with => "5 feet 11 inches")
     fill_in("ship_name_1", :with => "Flying Dutchman")
-    fill_in("ship_type_1", :with => "ghost ship")
+    fill_in("ship_category_1", :with => "ghost ship")
     fill_in("ship_booty_1", :with => "gold coins")
     fill_in("ship_name_2", :with => "Black Pearl")
-    fill_in("ship_type_2", :with => "merchant vessel")
+    fill_in("ship_category_2", :with => "merchant vessel")
     fill_in("ship_booty_2", :with => "treasure map")
     click_button('Submit')
     expect(page).to have_content("Captain Jack Sparrow")
